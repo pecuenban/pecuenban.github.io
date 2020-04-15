@@ -31,6 +31,32 @@
     font-size: 14pt;
     outline: none;
 }
+      body{
+        margin: 0px;
+      }
+      @media screen and (max-width:400px){
+        div:after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+}
+        div input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 34px;
+}
+        div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+      }
     </style>
   </head>
   <body>
