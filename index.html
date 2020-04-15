@@ -3,7 +3,13 @@
   </head>
   <body>
     <svg viewBox="0 0 200 200">
-        <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"/>
+      <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00bc9b" />
+      <stop offset="100%" stop-color="#5eaefd" />
+    </linearGradient>
+  </defs>
+        <path stroke="url(#gradient)" stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"/>
     </svg>
   </body>
 </html>
