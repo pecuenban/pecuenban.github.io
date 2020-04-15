@@ -1,5 +1,50 @@
 <html>
   <head>
+    <style>
+      div * {
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin: 15px 0px;
+}
+      div button:hover {
+    box-shadow: 1px 1px 3px #737373;
+}
+      div {
+    position: absolute;
+    top: 151px;
+    left: 136px;
+}
+      svg {
+    max-width: 400px;
+}
+      path {
+    stroke-dasharray: 472px;
+    transform-origin: center;
+    transform: rotate(90deg) scaleY(-1);
+    stroke-linecap: round;
+    transition: all 0.5s;
+}
+      div input {
+    border: solid 1px #ccc;
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 14pt;
+    outline: none;
+}
+div button {
+    border: none;
+    color: white;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    box-shadow: 2px 2px 5px #737373;
+    border-radius: 50px;
+    font-size: 12pt;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+    </style>
   </head>
   <body>
     <svg viewBox="0 0 200 200">
@@ -9,16 +54,9 @@
       <stop offset="100%" stop-color="#5eaefd" />
     </linearGradient>
   </defs>
-        <path stroke="url(#gradient)" stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" style="
-    stroke-dasharray: 472px;
-    transform-origin: center;
-    transform: rotate(90deg) scaleY(-1);
-    stroke-linecap: round;
-    transition: all 0.5s;
-                                                                                                                                           
-" stroke-dashoffset="236px"></path>
+        <path stroke="url(#gradient)" stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke-dashoffset="472px"></path>
     </svg>
-    <input type="number" min="0" max="100" id="campo" placeholder="porcentaje"><button onclick="enviar()">Actualizar</button>
+    <div><input type="number" min="0" max="100" id="campo" placeholder="porcentaje"><button onclick="enviar()">Actualizar</button></div>
     <script>
       function enviar(){
        setPorcentaje(document.getElementById("campo").value); 
