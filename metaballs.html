@@ -1,0 +1,72 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     
+     
+    </style>
+  </head>
+  <body>
+  <div class="blobs"><div class="blob blob_1"></div><div class="blob blob_2"></div><div class="blob blob_3"></div></div>
+<style>
+
+.blobs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    -webkit-filter: blur(20px) contrast(30);
+    filter: blur(20px) contrast(30);
+    transition: all 0.5s;
+}
+
+.blobs:hover {
+  -webkit-filter: blur(0px) contrast(1);
+          filter: blur(0px) contrast(1);
+}
+.blobs:hover .blob.blob_1{
+transform: translate(-80px,-80px);
+}
+.blobs:hover .blob.blob_2{
+transform: translate(0px,-100px);
+}
+.blobs:hover .blob.blob_3{
+transform: translate(-100px,0px);
+}
+.blobs:hover .blob{
+  width: 70px;
+  height: 70px;
+
+}
+.blob:after {
+  width: 70px;
+  height: 70px;
+text-align:center;
+line-height: 70px;
+content:'1';
+color: black;
+position: absolute;
+font-size: 15pt;
+color: white;
+}
+.blob {
+  background: red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 70%;
+  top: 70%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 100%;
+transition: all 0.5s;
+}
+</style>
+    
+    
+  </body>
+</html>
