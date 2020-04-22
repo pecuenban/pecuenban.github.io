@@ -1,17 +1,34 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400&display=swap" rel="stylesheet">
-<div class="container">
-<div class="tarjeta"><span>Sección 1</span></div>
-<div class="tarjeta"><span>Sección 2</span></div>
-<div class="tarjeta"><span>Sección 3</span></div>
-<div class="tarjeta"><span>Sección 4</span></div>
-<div class="tarjeta"><span>Sección 5</span></div>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+        <style>
+.tarjeta a:hover {
+    box-shadow: 2px 2px 7px #aaa;
+    bottom: 11px;
+}
 
-</div>
-<style>
+.tarjeta a {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    bottom: 9px;
+    right: 13px;
+    font-size: 11pt;
+    color: #0077c2;
+    display: block;
+    padding: 4px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
 .tarjeta span {
     font-size: 13pt;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
+}
+.tarjeta p {
+    font-family: 'Roboto', sans-serif;
+font-size: 10pt;
 }
 .container {
 
@@ -28,7 +45,11 @@
     margin-left: 15px;
 }
 .tarjeta {
-    width: 140px;
+
+    position: relative;
+vertical-align: text-top;
+    white-space: normal;
+    width: 160px;
     background: white;
     height: 230px;
     display: inline-block;
@@ -40,3 +61,19 @@
 body{
 background:#eee;margin:0px}
 </style>
+    </head>
+    <body>
+        <div class="container">
+<div class="tarjeta"><span>Sección 1</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 2</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 3</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 4</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 5</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 6</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 7</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 8</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 9</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+<div class="tarjeta"><span>Sección 10</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in placerat tortor. Praesent quis eros.</p><a href="#">Enlace</a></div>
+
+</div>
+    </body>
