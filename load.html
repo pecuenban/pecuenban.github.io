@@ -79,18 +79,24 @@
       animation-direction: alternate;
       animation-iteration-count: infinite;*/
     }
+     .resultado.oculto{
+    top: 15px;
+       opacity:0;
+     }
      .resultado{
-    font-family:sans-serif;      
-    text-align:center;
-    position:fixed;
-       font-size:15pt;
-       width:80%;
-       box-shadow:3px 3px 6px rgba(0,0,0,0.4);
-       padding:15px;
-       border-radius: 10px;
-      left:0;
-      right:0;
-      bottom:15px;
+       transition: all 0.5s;
+       opacity: 1;
+    text-align: center;
+    position: fixed;
+    font-size: 15pt;
+    width: 80%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    top: 35px;
+    margin: auto;
      }
     </style>
   </head>
@@ -103,7 +109,7 @@
     
     <div class="info" onmousedown="empezar()" ontouchstart="empezar()" ontouchend="terminar()" onmouseup="terminar()"><img src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-fingerprint_90738.png"></div>
     </div>
-    <div class="resultado" id="res" style="display:none">
+    <div class="resultado oculto" id="res" style="display:none">
       Huella reconocida con éxito
     </div>
     <p>Para reiniciar recarga la página</p>
@@ -127,7 +133,7 @@
             progreso++;
         }else{
             completo = true;
-          document.getElementById("res").removeAttribute("style");
+          document.getElementById("res").setAttribute("class","resultado");
         }
         pintar(progreso/2);
     }
