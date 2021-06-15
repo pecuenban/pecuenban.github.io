@@ -20,6 +20,15 @@
         bottom: 60px;
         margin:auto;
     }
+     img {
+    max-width: 50%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
     .contenedor > *{
     position: absolute;
     left:0;
@@ -70,6 +79,19 @@
       animation-direction: alternate;
       animation-iteration-count: infinite;*/
     }
+     .resultado{
+    font-family:sans-serif;      
+    text-align:center;
+    position:fixed;
+       font-size:15pt;
+       width:80%;
+       box-shadow:3px 3px 6px rgba(0,0,0,0.4);
+       padding:15px;
+       border-radius: 10px;
+      left:0;
+      right:0;
+      bottom:15px;
+     }
     </style>
   </head>
   <body>
@@ -79,7 +101,10 @@
     <div class="animado" id="porcentaje">
     </div>
     
-    <div class="info" onmousedown="empezar()" ontouchstart="empezar()" ontouchend="terminar()" onmouseup="terminar()">Press</div>
+    <div class="info" onmousedown="empezar()" ontouchstart="empezar()" ontouchend="terminar()" onmouseup="terminar()"><img src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-fingerprint_90738.png"></div>
+    </div>
+    <div class="resultado" id="res" style="display:none">
+      Huella reconocida con éxito
     </div>
     <p>Para reiniciar recarga la página</p>
     <script>
@@ -102,6 +127,7 @@
             progreso++;
         }else{
             completo = true;
+          document.getElementById("res").removeAttribute("style");
         }
         pintar(progreso/2);
     }
