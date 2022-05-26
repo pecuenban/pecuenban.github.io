@@ -23,7 +23,10 @@
     transform: rotate(90deg) scaleY(-1);
     stroke-linecap: round;
     transition: all 0.5s;
-}
+}/*
+path +path +path {
+    transform: rotate(calc(90deg + 1deg * 3.6 * 5)) scaleY(-1);
+}*/
       div input {
     border: solid 1px #ccc;
     border-radius: 50px;
@@ -70,15 +73,26 @@
         
     <path stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" style="z-index: 0;stroke: #c7c7c7;"></path>
       <path stroke="url(#gradient)" stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke-dashoffset="472px"></path>
+      <path stroke="url(#gradient)" stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke-dashoffset="472px"></path>
+      <path stroke="url(#gradient)" stroke-width="6" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke-dashoffset="472px"></path>
     </svg>
     <div><input oninput="enviar()" type="number" min="0" max="100" id="campo" placeholder="porcentaje"></div>
     <script>
+enviar();
       function enviar(){
        setPorcentaje(document.getElementById("campo").value); 
       }
       function setPorcentaje(cant){
-    pixel = 472 - 472/100 * cant;
+    pixel = 472 - 472/100 * cant + 8;
+if(pixel > 472){
+pixel = 471;
+}
+    pixel2 = 472 - 472/100 * 20+ 8;
     document.getElementsByTagName("path")[1].setAttribute("stroke-dashoffset",pixel+"px");
+    document.getElementsByTagName("path")[2].setAttribute("stroke-dashoffset",pixel2+"px");
+    document.getElementsByTagName("path")[2].setAttribute("style","transform:rotate(calc(90deg + 1deg * 3.6 * "+cant+")) scaleY(-1)");
+    document.getElementsByTagName("path")[3].setAttribute("stroke-dashoffset",pixel+"px");
+    document.getElementsByTagName("path")[3].setAttribute("style","transform:rotate(calc(90deg + 1deg * 3.6 * ("+cant+" + 20))) scaleY(-1)");
 }
     </script>
   </body>
